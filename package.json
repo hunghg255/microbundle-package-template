@@ -1,6 +1,6 @@
 {
   "name": "microbundle-package-template",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -18,37 +18,26 @@
     }
   },
   "scripts": {
-    "lint": "eslint src --color",
+    "lint": "eslint --ext .ts,.tsx src --color",
     "size": "npm run build && size-limit",
     "check-types": "tsc --noEmit true",
     "build": "del-cli 'dist/*' && microbundle build --entry src/index.ts --name microbundle-package-template --css inline --tsconfig tsconfig.build.json"
   },
   "keywords": [],
   "author": "hunghg255",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "@hunghg255/eslint-config-ts": "^0.0.2",
     "@size-limit/preset-small-lib": "^8.2.4",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "@typescript-eslint/parser": "^4.17.0",
     "del-cli": "^5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint": "^8.41.0",
     "microbundle": "^0.15.1",
     "prettier": "^2.8.8",
     "size-limit": "^8.2.4",
     "typescript": "^4.8.4"
   },
   "files": [
-    "dist/*.{js,mjs,ts,map}",
-    "dist/components/*.ts",
-    "dist/utils/nonce.d.ts",
-    "LICENSE",
-    "ACKNOWLEDGMENTS",
-    "README.md",
-    "package.json"
+    "dist"
   ],
   "size-limit": [
     {
@@ -63,5 +52,13 @@
       "import": "{ b }",
       "limit": "3 KB"
     }
-  ]
+  ],
+  "homepage": "https://github.com/hunghg255/hunghg255",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/hunghg255"
+  },
+  "bugs": {
+    "url": "https://github.com/hunghg255/hunghg255/issues"
+  }
 }
