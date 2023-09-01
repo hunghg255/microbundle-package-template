@@ -24,7 +24,7 @@
     "build": "del-cli 'dist/*' && microbundle build --entry src/index.ts --name microbundle-package-template --css inline --tsconfig tsconfig.build.json",
     "test": "vitest",
     "verify-commit": "verify-commit-msg",
-    "postinstall": "git-scm-hooks",
+    "prepare": "git-scm-hooks",
     "release": "bumpp -r && npm publish"
   },
   "keywords": [],
